@@ -1,0 +1,31 @@
+.main_container{
+    width: fit-content;
+    margin: auto;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: black;
+    
+}
+.chess_container{
+    width: 800px;
+    height: 800px;
+    background-color: whitesmoke;
+    border-style: inset;
+    
+}
+.row_container{
+    display: flex;
+    width: 800px;
+    height: 100px;
+    flex-wrap: wrap;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+
+}
+.black{
+    background-color: black;
+ 
+}
