@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="./test.css">
+</head>
+<body>
+
+<!-- <h1>This is a heading</h1>
+
+<p>This is a paragraph.</p>
+<p>This is a paragraph.</p>
+<p>This is a paragraph.</p> -->
+
+
+<!-- <img id="myimage" src="./pic_bulboff copy.gif" alt="BULB" width="100" height="180">
+<p>
+    <button type="button" onclick="light(1)">Light On</button>
+    <button type="button" onclick="light(0)">Light Off</button>
+</p> -->
+<form action="./testdata.txt">
+    <fieldset>
+        <legend>personal details</legend>
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname"><br><br>
+        <input type="radio" id="male"name="male">
+        <label for="male">Male</label><br><br>
+        <input type="radio" id="female"name="female">
+        <label for="female">Male</label><br><br>
+        <label for="country">Choose a country:</label>
+        <select name="country" id="country"size="2">
+            <option value="india" >India</option>
+            <option value="germany" selected>Deutschland</option>
+            <option value="egypt">Egypt</option>
+            <option value="southafrica">South Africa</option>
+        </select><br><br>
+        <textarea name="message" id="message" cols="30" rows="10"></textarea><br><br>
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="IE"></option>
+            <option value="Chrome"></option>
+            <option value="Firefox"></option>
+            <option value="Opera"></optiosn>
+        </datalist>
+
+<input type="submit">
+</fieldset>
+</form>
+<script src="./test.js"></script>
+</body>
+
+</html>

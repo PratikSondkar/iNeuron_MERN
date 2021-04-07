@@ -1,0 +1,37 @@
+body{
+    min-height: 100%;
+    top:0px
+}
+
+.intro_container{
+    background-color:white;
+    height: 68px;
+    
+}
+.logo_link{
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1;
+    color: #555555;
+    letter-spacing: 3px;
+    font-size: 37px;
+    position: absolute;
+    display: block;
+}
+
+.login_container{
+    width: 80px;
+    height: 50px;
+    float: right!important;
+}
+.login_btn{
+    padding: 6px 12px;
+    line-height: 1.5;
+    position: relative;
+    color: #fff;
+    background-color: #4caf50;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    top:7px;
+}
