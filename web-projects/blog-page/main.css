@@ -1,0 +1,24 @@
+body{
+    background-color: 	#232b2b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.title{
+    color: red;
+}
+
+a{
+    text-decoration: none;
+    color: #EDF5E1;
+}
+aside{
+  color: #379683;
+}
+p{
+    color: #edf5e1;
+}
+h3{
+    color: #5cdb95;
+}
+small{
+    color:#EDF5E1;
+}
