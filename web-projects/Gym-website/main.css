@@ -1,0 +1,127 @@
+body{
+    font-family: 'Ubuntu Mono', monospace;
+    margin:0;
+    padding:0;
+    background: url(images/pexels-binyamin-mellish-116077.jpg);
+    background-repeat: no-repeat;
+    background-position: center center fixed; 
+    background-size: cover;
+}
+
+.left{
+    position: absolute;
+    left: 34px;
+    top: 20px;
+    display:inline-block;
+}
+
+.mid{
+    position: relative;
+    right: 75px;
+    margin: 29px auto;
+    display: block;
+    width: 45%;
+}
+.right{
+    position: absolute;
+    right: 34px;
+    top: 30px;
+    display: inline-block;
+
+}
+.navbar{
+    display:inline-block;
+}
+.navbar li {
+    display: inline-block;
+    font-size: 22px;
+}
+.navbar li a{
+    color: white;
+    text-decoration:none;
+    padding:34px 23px;
+}
+.navbar>li>a:hover .navbar>li>a:active{
+    text-decoration:underline;
+    color:red;
+}
+.left img{
+    position:relative;
+    bottom: 60px;
+    top: 5px;
+    width: 200px;
+    border-radius: 50%;
+    filter: invert(100%);
+    
+}
+.left div{
+    text-align:center;
+    color:white;
+    
+}
+.btn{
+    margin:5px;
+    width: 150px;
+    text-align: center;
+    color: #fff;
+    background-color: #2d2f31;
+    border-color: #2d2f31;
+    display: inline-block;
+    font-weight: 400;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+
+.container{
+    border: 2px solid white;
+    width: 28%;
+    /* padding: 40px; */
+    /* border-radius: 28px; */
+    vertical-align: center;
+    margin: 250px 14px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.container h1{
+    color: white;
+    font-size:20px;
+    padding: auto;
+    
+}
+input[type=text], input[type=tel]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
+}
+input[type=radio]{
+    margin:8px 0;
+}
+.form-group label{
+    color:white;
+    margin:50px 0;
+}
+.container button{
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container button:hover{
+background-color: #45a049;
+}
