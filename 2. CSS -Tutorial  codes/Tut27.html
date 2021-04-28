@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+
+    <style>
+        h1{
+            background-color: red;
+            color: black;
+            text-align: center;
+            font-size: bold;
+
+        }
+
+        div p{
+            background-color: green;
+            color: yellow;
+        }
+        div li p{
+            background-color: brown;
+            color:white;
+        }
+        /* Should be direct chold of div */
+        div > p {                          
+            background-color: blue;
+            color:white;
+        }
+        /* Previous sibling should be div */
+
+        div + p{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is more on selectors!</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item">
+                    <p>This is a paragraph inside li and this is not a direct child of div. It will not get affected.</p>
+                </li>
+            </ul>
+            <p> This is the second paragraph and it will get affected because it is the direct child of div.</p>
+        </div>
+        <p> This is the third pargraph and it will get affected because it is also a direct child</p>
+    </div>
+    <p> This is the outer most paragraph and it will not get affected. </p>
+</body>
+</html>
