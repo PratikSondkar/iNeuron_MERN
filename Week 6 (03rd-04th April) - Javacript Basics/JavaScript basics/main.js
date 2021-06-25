@@ -33,8 +33,8 @@ else{
 
 // ------------------------------------ map ---------------------------------------
 
-// //Used to keep the original array value wihtout changing the original array.
-// //Creates a new array keeping original intact and mapping the original values to the new updated values.
+//Used to keep the original array value without changing the original array.
+//Creates a new array keeping original intact and mapping the original values to the new updated values.
 
 // E.g - 1
 var numbers = [2,4,6,8,10,12];
@@ -111,7 +111,7 @@ console.log("Filled:", filled);
 // The search will start at the specified position, or at the beginning if no start position is specified, 
 // and end the search at the end of the array.
 // Returns -1 if the item is not found.
-// If the item is present more than once, the indexOf method returns the position of the first occurence.
+// If the item is present more than once, the indexOf method returns the position of the first occurrence.
 // Tip: If you want to search from end to start, use the lastIndexOf() method.
 
 var fruits = ["Banana", "Orange", "Apple", "Mango"];

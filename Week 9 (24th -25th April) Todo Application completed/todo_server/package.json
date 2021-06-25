@@ -1,0 +1,16 @@
+{
+  "name": "todo_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx json-server --watch db.json --port 3005"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json": "^11.0.0",
+    "server": "^1.0.32"
+  }
+}
