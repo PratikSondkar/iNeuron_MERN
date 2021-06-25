@@ -5,18 +5,29 @@ var len = label.length;
 
 // ------------------------------- find ----------------------------------------- 
 
+// Find will not exit the loop unless true condition is met.
 var value = 55;
+/*
 var found = arr.find(function find_num(num){ //normal function
-    return value == num;
-    
+    return value == num;   
 });
 
-if(value){
+if(found){
     console.log("Value",found,"is present");
 }
 else{
     console.log("Value is not present");
 }
+*/
+var found = arr.find(num => num == value)   //modified function
+
+if(found){
+    console.log("Value", found, "is present.");
+}
+else{
+    console.log("Value is not present");
+}
+
 
 // -------------------------------- findIndex ---------------------------------------
 
@@ -35,14 +46,20 @@ else{
 
 //Used to keep the original array value without changing the original array.
 //Creates a new array keeping original intact and mapping the original values to the new updated values.
+//returns array
 
 // E.g - 1
-var numbers = [2,4,6,8,10,12];
+var numbers = [2, 4, 6, 8, 10, 12];
 var sqrs = numbers.map(function squares(num){
     return num*num;
 });
 
+
 console.log("Squares:",sqrs);
+/*
+var sqrs = numbers.map(num => {num*num});
+console.log("Squares:",sqrs);
+*/
 
 //E.g - 2
 var persons = [
@@ -51,7 +68,7 @@ var persons = [
     {firstname : "Krish", lastname: "Naik"}
   ];
 
-  var full_name = persons.map(item => [item.firstname,item.lastname].join(' ')); //modified function
+  var full_name = persons.map(item => [item.firstname, item.lastname].join(' ')); //modified function
 
   console.log("Full name:",full_name);
 
@@ -59,7 +76,7 @@ var persons = [
 // ------------------------------------------ filter ----------------------------------------
 
 //The filter() method creates an array filled with all array elements that 
-//pass a test (provided as a function).
+//pass a test (provided as a function). returns array
 
 var ans = arr.filter(value => value>60);
 
@@ -71,6 +88,9 @@ console.log("Answer:",ans);
 // The reduce() method reduces the array to a single value.
 // It executes a provided function for each value of the array (from left-to-right).
 // The return value of the function is stored in an accumulator (result/total)
+// We can pass a default accumulator as second argument i.e nums.reduce((total,number)=>total-number),0)
+// The accumulator +/- number will be returned and stored in accumulator, hence for next iteration
+// accumulator will have updated value after operation. 
 // We can make any JS function using reduce as it is very powerful.
 
 var nums = [75, 25, 15, 10, 5];
@@ -83,16 +103,17 @@ console.log("Answer reduced:",reduced_val);
 // The slice() method returns the selected elements in an array, as a new array object.
 // The slice() method selects the elements starting at the given start argument, 
 // and ends at, but does not include, the given end argument.
+//returns single value
 
 var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
 var citrus = fruits.slice(1, 3);
 
 console.log("Sliced fruits:",citrus)
-// destructiong of array
+// destruction of array
 // making a copy of array
 // ----------------------------------------- push Completed -------------------------------------
 // ----------------------------------------- pop Completed --------------------------------------
-// forEach
+// -------------------------------------------- forEach -----------------------------------------
 // ----------------------------------------- fill -----------------------------------------------
 
 // The fill() method fills the specified elements in an array with a static value.
