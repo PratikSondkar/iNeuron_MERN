@@ -55,7 +55,7 @@ var sqrs = numbers.map(function squares(num){
 });
 
 
-console.log("Squares:",sqrs);
+console.log("Squares:", sqrs);
 /*
 var sqrs = numbers.map(num => {num*num});
 console.log("Squares:",sqrs);
@@ -94,7 +94,7 @@ console.log("Answer:",ans);
 // We can make any JS function using reduce as it is very powerful.
 
 var nums = [75, 25, 15, 10, 5];
-var reduced_val = nums.reduce((total,number)=>total-number);
+var reduced_val = nums.reduce((total, number)=>total-number);
 
 console.log("Answer reduced:",reduced_val);
 

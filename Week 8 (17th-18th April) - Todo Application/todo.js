@@ -7,13 +7,15 @@
      console.log(titlefield.value);
  });
  */
+
 /* const todos = [
   {
     title: "Meeting",
     description: "There will be a meeting at 6pm Today",
     createdAt: new Date().toString(),
     status: "Active",
-  },  {
+  },
+  {
     title: "Lunch",
     description: "Lunch at 1 pm",
     createdAt: new Date().toString(),
@@ -58,7 +60,7 @@ const todo_list = document.querySelector(".todo_list");
 const title = document.querySelector("#title");
 const description = document.querySelector("#description");
 
-// When the user clicks on add todo button
+//  This code is when the user clicks on add todo button.
 //------------------------------------------------------------------
 
 butn.addEventListener("click", function () {
@@ -89,10 +91,14 @@ butn.addEventListener("click", function () {
             createdAt : new Date().toString(),
             status: 'Active'
         }; */
+
+        // Other way is to create a getTodo function that will get us a todo.
     var todo = getTodo(formValues.title, formValues.description);
 
-    //todos.push(todo); OR immutable way
-    todos = [...todos, todo]
+//  todos.push(todo); OR immutable way
+
+
+     todos = [...todos, todo]
   } else {
     //edit functionality
 
@@ -106,7 +112,7 @@ butn.addEventListener("click", function () {
 
     todos = newTodos;
   }
-  // Clearing the textbox for next time.
+  // Clearing the text box for next time.
   title.value = null;
   description.value = null;
 
@@ -114,6 +120,30 @@ butn.addEventListener("click", function () {
   
   render(todos);
 });
+// --------------------------------------------------------------------------------------------------------
+
+// This function gives us new todo everytime.
+function getTodo(title, description) {
+  //We can extract the last element and get out it's id
+  // And id+1 will be our new id.
+  var id;
+
+  if (todos.length == 0) id = 1;
+
+  else {
+    var last = todos[todos.length-1];
+    id = last.id + 1;
+  }
+
+  return {
+    // title:title, This can be written as only title. JS will automatically understand this
+    id,  // or id:id
+    title,
+    description,
+    createdAt: new Date().toString(),
+    status: "Active",
+  };
+}
 
 function persistTodos(todos){
 
@@ -128,7 +158,7 @@ function editLock(id) {
   butn.textContent = "Save";
 }
 
-//This dunction will get us out of edit mode
+//This function will get us out of edit mode
 function releaseEditLock() {
   editid = null;
   isEdit = false;
@@ -138,28 +168,6 @@ function releaseEditLock() {
 
 //Gives us a new todo item everytime
 //-------------------------------------------------------------------
-
-function getTodo(title, description) {
-  //We can extract the last element and get out it's id
-  // And id+1 will be our new id.
-  var id;
-
-  if (todos.length == 0) id = 1;
-  else {
-    var last = todos[todos.length-1];
-    id = last.id + 1;
-  }
-
-  return {
-    // title:title, This can be written as only title.JS will automatically understand this
-    id,
-    title,
-    description,
-    createdAt: new Date().toString(),
-    status: "Active",
-  };
-}
-
 //--------------------------------------------------------------------
 /*2. function makeItem(title,description,status) {
      const outerRow = document.createElement('div');
@@ -184,24 +192,26 @@ function getTodo(title, description) {
  div or button or anything else.*/
 
 /*4. function render() {
-    const mainRow = document.createElement("div");
-    mainRow.className = "row jumbotron section";
+  const mainRow = document.createElement("div");
+  mainRow.className = "row jumbotron section";
 
-   const titlediv = document.createElement("div");
-   const descriptiondiv = document.createElement("div");
-   const statusdiv = document.createElement("div");
+  const titlediv = document.createElement("div"); // Title Div 
+  titlediv.className = "col-md-2";
+  titlediv.textContent = "Meeting";
 
-   titlediv.className = "col-md-2";
-   titlediv.textContent = "Meeting";
-   descriptiondiv.className = "col-md-2";
-   descriptiondiv.textContent = "Meeting at 6 pm today";
-   statusdiv.className = "col-md-2";
-   statusdiv.textContent = "Active";
+  const descriptiondiv = document.createElement("div"); // Description Div
+  descriptiondiv.className = "col-md-2";
+  descriptiondiv.textContent = "Meeting at 6 pm today";
+
+  const statusdiv = document.createElement("div");  //Status Div
+  statusdiv.className = "col-md-2";
+  statusdiv.textContent = "Active";
+
 
    let markCompleteddiv = document.createElement("div");
    markCompleteddiv.className = "col-md-2";
 
-   let statusBtn = document.createElement("button");
+   let statusBtn = document.createElement("button");  // Mark completed button
    statusBtn.className = "btn btn-info";
    statusBtn.textContent = "Mark Completed";
 
@@ -216,7 +226,7 @@ function getTodo(title, description) {
    let editdiv = document.createElement("div");
    editdiv.className = "col-md-3";
 
-   statusBtn = document.createElement("button");
+   statusBtn = document.createElement("button");  //Edit button
    statusBtn.className = "btn btn-primary";
    statusBtn.textContent = "Edit";
 
@@ -227,7 +237,7 @@ function getTodo(title, description) {
    let statusAction = document.createElement("div");
    statusAction.className = "col-md-3";
 
-   statusBtn = document.createElement("button");
+   statusBtn = document.createElement("button");  // Delete button
    statusBtn.className = "btn btn-danger";
    statusBtn.textContent = "Delete";
 
@@ -275,9 +285,7 @@ function render(todos) {
 
 //--------------------------------------------------------------------------
 
-/* 5. As we have creaed a list manually above now we will pass the
- todo list that we have already stored inside an object.
- */
+// 5. As we have created a list manually above now we will pass the todo list that we have already stored inside an object.
 
 //This function renders/ makes an html code for making todo item in list
 //-----------------------------------------------------------------
@@ -304,7 +312,7 @@ function renderATodoItem(todo) {
   statusBtn.className = "btn btn-info";
   statusBtn.textContent = "Mark Completed";
 
-  // This is when user clicks Mark cmpleted button.
+  // This is when user clicks Mark completed button.
 
   statusBtn.addEventListener("click", function () {
     /* Task 2 find out todo from
@@ -369,7 +377,7 @@ function renderATodoItem(todo) {
     //Task 3
     // remove todo from todos whose id is todo.id (filter)
 
-    //Imuutable way
+    //Immutable way
     var newTodos = todos.filter((t) => t.id != todo.id); //filter function return new array itself. Here we filtered the item from todo list
     // which matches the condition. That means we have deleted that item. Hence it is not
     //present and above condition turns true.

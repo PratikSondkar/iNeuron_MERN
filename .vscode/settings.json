@@ -1,8 +1,10 @@
 {
     "liveServer.settings.port": 5501,
     "cSpell.words": [
+        "Todoitem",
         "everytime",
         "lastname",
-        "nums"
+        "nums",
+        "todos"
     ]
 }
